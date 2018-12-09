@@ -61,6 +61,15 @@ namespace Mixed_Programs
             return 0;
         }
     }
+    class Rectangle
+    {
+        public int Kwadrat(int a)
+        {
+            Console.WriteLine(a+a+a+a+"/n"+a+"    "+a+"/n"+a+"    "+a+"/n"+a+"    "+a+"/n"+a+a+a+a);
+            System.Threading.Thread.Sleep(10000);
+            return 0;
+        }
+    }
     class Test
     {
         static void Main(string[] args)
@@ -70,6 +79,7 @@ namespace Mixed_Programs
             Divide D = new Divide();
             Swap S = new Swap();
             Average Av = new Average();
+            Rectangle Re = new Rectangle();
             int X;
             Console.WriteLine("GIB ME NUMBER");
             int num1 = int.Parse(Console.ReadLine());
@@ -81,6 +91,7 @@ namespace Mixed_Programs
             Console.WriteLine("GIB ME NUMBER THREE");
             int num3 = int.Parse(Console.ReadLine());
             X = Av.Srednia(num1,num2,num3);
+            X = Re.Kwadrat(num1);
 
 
         }
