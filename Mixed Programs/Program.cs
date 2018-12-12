@@ -63,9 +63,13 @@ namespace Mixed_Programs
     }
     class Rectangle
     {
-        public int Kwadrat(int a)
+        public int Kwadrat(int a, int b, int c)
         {
-            Console.WriteLine(a+a+a+a+"/n"+a+"    "+a+"/n"+a+"    "+a+"/n"+a+"    "+a+"/n"+a+a+a+a);
+            int[] tab = new int[3] { a, b, c };
+//            tab[0] = a;
+//            tab[1] = b;
+//            tab[2] = c;
+            Console.WriteLine(tab[0]+ " " + tab[1] + " " + tab[2] + " " + tab[0] + "\n" + tab[2] + "    " +  "   " + tab[0] + "\n" + tab[0] + "   " + "    " + tab[1] + "\n" + tab[0] + " " + tab[1] + " " + tab[2] + " " + tab[0]);
             System.Threading.Thread.Sleep(10000);
             return 0;
         }
@@ -83,15 +87,15 @@ namespace Mixed_Programs
             int X;
             Console.WriteLine("GIB ME NUMBER");
             int num1 = int.Parse(Console.ReadLine());
-            X = A.Dodawanie(num1);
-            X = D.Dzielenie(num1);
+// X = A.Dodawanie(num1);
+// X = D.Dzielenie(num1);
             Console.WriteLine("GIB ME NUMBER TWO");
             int num2 = int.Parse(Console.ReadLine());
-            X = S.Podmiana(num1,num2);
+// X = S.Podmiana(num1,num2);
             Console.WriteLine("GIB ME NUMBER THREE");
             int num3 = int.Parse(Console.ReadLine());
-            X = Av.Srednia(num1,num2,num3);
-            X = Re.Kwadrat(num1);
+// X = Av.Srednia(num1,num2,num3);
+            X = Re.Kwadrat(num1, num2, num3);
 
 
         }
