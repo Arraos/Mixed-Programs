@@ -66,12 +66,22 @@ namespace Mixed_Programs
         public int Kwadrat(int a, int b, int c)
         {
             int[] tab = new int[3] { a, b, c };
-//            tab[0] = a;
-//            tab[1] = b;
-//            tab[2] = c;
             Console.WriteLine(tab[0]+ " " + tab[1] + " " + tab[2] + " " + tab[0] + "\n" + tab[2] + "    " +  "   " + tab[0] + "\n" + tab[0] + "   " + "    " + tab[1] + "\n" + tab[0] + " " + tab[1] + " " + tab[2] + " " + tab[0]);
             System.Threading.Thread.Sleep(10000);
             return 0;
+        }
+    }
+    class StringModify
+    {
+        public string Wyluskanie(string a)
+        {
+            int LastLetter = a.Length;
+            Console.WriteLine("Długość wyrazu wynosi: " + LastLetter + " liter");
+            Random rnd = new Random();
+            int RandomLetter1 = rnd.Next(1,LastLetter);
+            Console.WriteLine(a.Remove(LastLetter, 1));
+            System.Threading.Thread.Sleep(6000);
+            return null;
         }
     }
     class Test
@@ -84,20 +94,23 @@ namespace Mixed_Programs
             Swap S = new Swap();
             Average Av = new Average();
             Rectangle Re = new Rectangle();
+            StringModify Sm = new StringModify();
             int X;
+            string Y;
             Console.WriteLine("GIB ME NUMBER");
             int num1 = int.Parse(Console.ReadLine());
-// X = A.Dodawanie(num1);
-// X = D.Dzielenie(num1);
+            //X = A.Dodawanie(num1);
+            //X = D.Dzielenie(num1);
             Console.WriteLine("GIB ME NUMBER TWO");
             int num2 = int.Parse(Console.ReadLine());
-// X = S.Podmiana(num1,num2);
+            //X = S.Podmiana(num1,num2);
             Console.WriteLine("GIB ME NUMBER THREE");
             int num3 = int.Parse(Console.ReadLine());
-// X = Av.Srednia(num1,num2,num3);
-            X = Re.Kwadrat(num1, num2, num3);
-
-
+            //X = Av.Srednia(num1,num2,num3);
+            //X = Re.Kwadrat(num1, num2, num3);
+            Console.WriteLine("GIB ME SUM' STRINGGG");
+            string str1 = Console.ReadLine();
+            Y = Sm.Wyluskanie(str1);
         }
     }
 }
