@@ -79,7 +79,8 @@ namespace Mixed_Programs
             Console.WriteLine("Długość wyrazu wynosi: " + LastLetter + " liter");
             Random rnd = new Random();
             int RandomLetter1 = rnd.Next(1,LastLetter);
-            Console.WriteLine(a.Remove(LastLetter, 1));
+            string wyraz = a.Remove(RandomLetter1, 1);
+            Console.WriteLine(wyraz);
             System.Threading.Thread.Sleep(6000);
             return null;
         }
